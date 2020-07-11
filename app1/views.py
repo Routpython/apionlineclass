@@ -70,5 +70,9 @@ def logins_stu(request):
 
 
 def enroll(request):
+    all_clases=AddNewClasses.objects.all()
+    return render(request,'enroll.html',{'classes':all_clases})
 
-    return render(request,'enroll.html')
+def view_enrollclass(request):
+
+    return render(request,'view_enrollclass.html')

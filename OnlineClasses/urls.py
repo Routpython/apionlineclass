@@ -32,5 +32,6 @@ urlpatterns = [
     path('st_login/',views.st_login,name='st_login'),
     path('logins_stu/',views.logins_stu,name='logins_stu'),
 
-    path('enroll/',views.enroll,name='enroll')
+    path('enroll/',views.enroll,name='enroll'),
+    path('view_enrollclass/',views.view_enrollclass,name='view_enrollclass')
 ]
