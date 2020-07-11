@@ -1,0 +1,37 @@
+{% extends 'common.html' %}
+
+{% block common %}
+      {% include 'adminmenu.html' %}
+    <br>
+    <h3 align="center">Add New Class</h3>
+
+    <hr color="blue" width="400">
+    <form method="post" action="{% url 'savenew' %}">
+    {% csrf_token %}
+        <table align="center" >
+            <tr><th>Course Name :</th><th>{{ form.name }}</th>
+            <tr><th>Faculty Name :</th><th>{{ form.faculty }}</th>
+            <tr><th>Date :</th><th>{{ form.date }}</th>
+            <tr><th>Time :</th><th>{{ form.time }}</th>
+            <tr><th>Price :</th><th>{{ form.price }}</th></tr>
+            <tr><th>Duration :</th><th>{{ form.duration }}</th>
+    <tr><th><button type="submit">Save</button> </th></tr>
+        
+{#        <tr><th>{{ form.errors }}</th></tr>#}
+            {% if res %}
+            <tr><th>
+                {{res}}
+            </th></tr>
+            {% endif %}
+        {% if error %}
+            <tr><th>
+                {{error}}
+            </th></tr>
+            {% endif %}
+    </table>
+    </form>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'common.html' %}
+
+{% block common %}
+      {% include 'adminmenu.html' %}
+    <h2 align="center">All Students</h2>
+    <hr width="700" color="red">
+
+    <br>
+    <table align="center" width="500" style="height: 200px">
+
+    <tr style="border: 2px; font-family: 'Candara Light';background-color:skyblue" >
+        <th>Subject</th>
+        <th>Faculty Name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Price</th>
+        <th>Duration(Hrs)</th>
+        </tr>
+    <tr></tr>
+
+        {% for x in res %}
+            <tr style="font-family:'Goudy Old Style'"><th>{{ x.name }}</th>
+                <th>{{x.faculty}}</th>
+                <th>{{x.date}}</th>
+                <th>{{x.time}}</th>
+                <th>{{ x.price }}</th>
+
+                    <th>{{x.duration}} Days</th></tr>
+    {% endfor %}
+
+    </table>
+    <tr><br></tr>
+
+
+{% endblock %}
