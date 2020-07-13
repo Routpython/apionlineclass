@@ -2,11 +2,8 @@
 
 {% block common %}
       {% include 'student_after_login_menu.html'%}
+    <h3>Welcome {{ cont }} To Your Profile</h3>
 
-
-    {% for x in log %}
-        <h3 align="center">Welcome {{ x.stu_name }} to Your Profile</h3>
-    {% endfor %}
 
 
 {% endblock %}

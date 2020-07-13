@@ -1,10 +1,15 @@
 
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a  class="nav-link " class=" nav-link " href="{% url 'newclass' %}">SCHEDULE NEW CLASSES</a>
+    </li>
+    <li class="nav-item">
+      <a   class="nav-link " href="{% url 'viewallclass' %}">VIEW ALL NEW CLASSES</a>
+    </li>
+    <li class="nav-item">
+      <a  class="nav-link " href="{% url 'home' %}">LOGOUT</a>
+    </li>
 
-<table align="center" width="100%" style="font-family: Stencil;background-color: greenyellow;
-color:orangered;border-radius: 34px;height: 34px">
-            <tr>
-            <th style="padding-right:167px"><a href="{% url 'newclass' %}">SCHEDULE NEW CLASSES</a></th>
-                <th style="padding-right:167px"><a href="{% url 'viewallclass' %}">VIEW ALL NEW CLASSES</a></th>
-                <th style="padding-right:67px"><a href="{% url 'home' %}">LOGOUT</a></th>
-            </tr>
-        </table>
+  </ul>
+</nav>

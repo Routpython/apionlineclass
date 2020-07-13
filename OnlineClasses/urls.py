@@ -24,6 +24,9 @@ urlpatterns = [
     path('adlogin/',views.adlogin,name='adlogin'),
     path('newclass/',views.newclass,name='newclass'),
     path('viewallclass/',views.viewallclass,name='viewallclass'),
+    path('subupdate/',views.subupdate,name='subupdate'),
+    path('delete/',views.delete,name='delete'),
+
 
     path('savenew/', views.savenew, name='savenew'),
     path('studenthome/',views.studenthome,name='studenthome'),
@@ -33,5 +36,6 @@ urlpatterns = [
     path('logins_stu/',views.logins_stu,name='logins_stu'),
 
     path('enroll/',views.enroll,name='enroll'),
+    path('e_roll/<int:no>/<int:cno>',views.e_roll,name='e_roll'),
     path('view_enrollclass/',views.view_enrollclass,name='view_enrollclass')
 ]

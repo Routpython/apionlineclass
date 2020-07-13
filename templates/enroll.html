@@ -2,7 +2,7 @@
 {% load static %}
 {% block common %}
       {% include 'student_after_login_menu.html'%}
-    <h2 align="center">Welcome {{ cont }}</h2>
+    <h2 align="center">Welcome <a href="#">{{ cno }}</a></h2>
     <hr width="700" color="red">
 
     <br>
@@ -26,12 +26,9 @@
                 <th>{{x.time}}</th>
                 <th>{{ x.price }}</th>
                 <th>{{x.duration}} Days</th>
-                <th><img src="{% static 'images/registration (1).png' %}" width="20" height="20"> </th>
+                 <th><a href="{% url 'e_roll' no=x.no cno=cno %}?no={{ x.no }}"><img src="{% static 'images/enrollment (2).png' %}" width="20" height="20"></a></th></tr>
 
     {% endfor %}
-
     </table>
-    <tr><br></tr>
-
-
+    <br>
 {% endblock %}

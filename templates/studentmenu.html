@@ -1,9 +1,20 @@
-<table align="center" width="100%" style="font-family: Stencil;background-color: greenyellow;
-color:orangered;border-radius: 34px;height: 34px">
-            <tr>
-            <th style="padding-right:167px"><a href="{% url 'st_register' %}">REGISTER</a></th>
-                <th style="padding-right:167px"><a href="{% url 'st_login' %}">LOGIN</a></th>
-                <th style="padding-right:67px"><a href="#">SEARCH</a></th>
-                <th style="padding-right:67px"><a href="#">CONTACT US</a></th>
-            </tr>
-        </table>
+
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a  class="nav-link" href="{% url 'st_register' %}">REGISTER</a>
+    </li>
+    <li class="nav-item ">
+     <a class="nav-link" href="{% url 'st_login' %}">LOGIN</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link " href="#">CONTACT US</a>
+    </li>
+      <li>
+        <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+  </form></li>
+  </ul>
+</nav>
