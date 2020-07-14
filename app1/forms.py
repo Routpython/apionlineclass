@@ -31,5 +31,6 @@ class StudentForm(forms.ModelForm):
 
     def clean_stu_name(self):
         st_name=self.cleaned_data['stu_name']
-        validate_name(st_name)
+        res=validate_name(st_name)
+        return res
 

@@ -31,11 +31,12 @@ urlpatterns = [
     path('savenew/', views.savenew, name='savenew'),
     path('studenthome/',views.studenthome,name='studenthome'),
     path('st_register/',views.st_register,name='st_register'),
+    path('search/',views.search,name='search'),
     path('st_save/',views.st_save,name='st_save'),
     path('st_login/',views.st_login,name='st_login'),
     path('logins_stu/',views.logins_stu,name='logins_stu'),
 
     path('enroll/',views.enroll,name='enroll'),
-    path('e_roll/<int:no>/<int:cno>',views.e_roll,name='e_roll'),
+    path('e_roll/',views.e_roll,name='e_roll'),
     path('view_enrollclass/',views.view_enrollclass,name='view_enrollclass')
 ]

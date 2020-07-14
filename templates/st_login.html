@@ -1,7 +1,7 @@
 {% extends 'common.html' %}
 
 {% block common %}
-      {% include 'mainmenu.html' %}
+      {% include 'studentmenu.html' %}
         <br>
     <h2 align="center">Student Login</h2>
     <hr color="blue" width="500">
@@ -13,7 +13,7 @@
     <tr><th><input type="password" placeholder="password" name="s2"></th></tr>
 
         <tr><th><button type="submit" >Login</button></th></tr>
-            {% for x in messages %}
+            {% for x in errors %}
             <tr><th>{{ x }}</th></tr>
                 {% endfor %}
     </table>

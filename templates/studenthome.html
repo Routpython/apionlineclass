@@ -2,6 +2,37 @@
 
 {% block common %}
       {% include 'studentmenu.html'%}
+    <br>
+    <h3 align="center">Welcome To Student Home</h3>
+    <hr width="700" color="red">
+    <table>
+        <tr>
+    {% for x in stu %}
+        <th>
+        <div class="card bg-primary" style="width: 18rem;">
 
+  <div class="card-body">{{ x.stu_name }}
+    <h5 class="card-title">{{x.contact}}</h5>
+    <p class="card-text">{{ x.email }}</p>
+  </div>
+</div>
+        </th>
+{% endfor %}
+        </tr></table>
 
+    <table align="center" style="font-family: 'Baskerville Old Face'">
+        {% if search %}
+            <tr><th>Student No : {{search.no  }}</th></tr>
+        <tr><th>Student Name : {{search.stu_name  }}</th></tr>
+             <tr><th>Student Contact : {{search.contact  }}</th></tr>
+             <tr><th>Student Email : {{search.email  }}</th></tr>
+
+    {% endif %}
+    </table>
+    {% if msg %}
+<div class="alert alert-success container-fluid" role="alert" align="center" style='width: 300px' >
+  {{ msg }}
+</div>
+    {% endif %}
+    <br>
 {% endblock %}

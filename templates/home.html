@@ -2,6 +2,32 @@
 
 {% block common %}
       {% include 'mainmenu.html' %}
+<br><br>
+<h1 align="center" style="font-family: 'Bitstream Vera Sans'">Welcome To Rout Online Classes</h1>
+<hr width="700" color="red">
+<h3 align="center" style="color:orangered">Here are the Available Classes !!! Join Now and Get Exclusive Discounts!!!</h3>
+<br><a href="{% url 'st_register' %}">
+    <table align="center" width="200">
+        <tr>
+    {% for x in sub %}
+         <tr>
+        <th>
+        <div class="card bg-success" style="width: 18rem;">
+
+  <div class="card-body">Course Name : {{ x.name }}
+    <p class="card-title">Faculty Name : {{x.faculty}}</p>
+      <p class="card-text">Class Time : {{ x.time }}</p>
+    <p class="card-text">Starting Date : {{ x.date}}</p>
+      <p class="card-text">Course Duration : {{ x.duration}}</p>
+  </div>
+</div>
+        </th></tr>
+{% endfor %}
+        </table>
+</a>
+</br>
+    <h2 align="center" style="color: crimson">!!! HURRY UP !!!</h2>
+</body>
 
 
 {% endblock %}

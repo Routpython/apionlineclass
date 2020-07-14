@@ -4,6 +4,13 @@
       {% include 'student_after_login_menu.html'%}
     <h3>Welcome {{ cont }} To Your Profile</h3>
 
+       <div class="container">
+    {% for x  in details %}
+        {{ x.stu_name }}
+        {{ x.contact }}
+        {{ x.email }}
+        {% endfor %}
+</div>
 
 
 {% endblock %}

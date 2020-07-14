@@ -13,9 +13,9 @@
         <th>{{ form1 }}</th>
     </tr>
         <tr><th><button type="submit">Register</button> </th></tr>
-        {% if success %}
-        <tr><th>{{ success }}</th></tr>
-        {% endif %}
+        {% for x in messages %}
+        <tr><th>{{ x }}</th></tr>
+        {% endfor %}
 
     </table>
     </form>

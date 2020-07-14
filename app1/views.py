@@ -5,7 +5,8 @@ from app1.forms import AddnewclassForm,StudentForm
 from app1.models import AddNewClasses,StudentModel,EnrollSubjects
 
 def home(request):
-    return render(request,'home.html')
+    sub=AddNewClasses.objects.all()
+    return render(request,'home.html',{'sub':sub})
 
 def adlogin(request):       #RETURN TO SAME PLACE AFTER ADMIN LOGIN
     uname=request.POST.get('a1')
@@ -55,7 +56,8 @@ def delete(request):
     return redirect('viewallclass')
 
 def studenthome(request):
-    return render(request,'studenthome.html')
+    stu = StudentModel.objects.all()
+    return render(request, 'studenthome.html', {'stu': stu})
 
 def st_register(request):
     form1=StudentForm()
@@ -65,21 +67,32 @@ def st_save(request):
     stu=StudentForm(request.POST)
     if stu.is_valid():
         stu.save()
-        return render(request, 'st_register.html', {'success':'Saved successfully'})
+        messages.success(request, 'Registered Successfully')
+        return redirect('st_register')
+
     else:
         return render(request,'st_register.html',{'error':stu.errors,'form1':stu})
 
 
+def search(request):
+    name=request.POST.get('e1')
+    try:
+        res=StudentModel.objects.get(stu_name=name)
+        return render(request,'studenthome.html',{"search":res})
+
+    except StudentModel.DoesNotExist:
+        return render(request,'studenthome.html',{'msg':'Enter a valid Student name'})
+
 def st_login(request):
     return render(request,'st_login.html')
-
 
 def logins_stu(request):
     con= request.POST.get("s1")
     passw = request.POST.get("s2")
     try:
-        log = StudentModel.objects.get(contact=con, passw=passw)
-        return render(request,'stu_profile_home.html', {'cont': con})
+        StudentModel.objects.get(contact=con, passw=passw)
+        details = StudentModel.objects.filter(contact=con, passw=passw)
+        return render(request, 'stu_profile_home.html', {'details': details, 'cont': con})
 
     except StudentModel.DoesNotExist:
         messages.error(request,'Contact No Or Password in Invalid')
@@ -92,9 +105,11 @@ def enroll(request):
     return render(request,'enroll.html',{'classes':all_clases,'cno':cont})
 
 def e_roll(request):
-    id=request.GET.get('no')
+   # id=request.GET.getlist('no')
     cno=request.GET.get('cno')
-    EnrollSubjects(no=id,contact=cno).save()
+
+    print(cno)
+    #EnrollSubjects(no=id,contact=cno).save()
     return redirect('enroll')
 
 def view_enrollclass(request):

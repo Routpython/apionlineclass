@@ -26,7 +26,7 @@
                 <th>{{x.time}}</th>
                 <th>{{ x.price }}</th>
                 <th>{{x.duration}} Days</th>
-                 <th><a href="{% url 'e_roll' no=x.no cno=cno %}?no={{ x.no }}"><img src="{% static 'images/enrollment (2).png' %}" width="20" height="20"></a></th></tr>
+                 <th><a href="{% url 'e_roll' %}?cno={{ cno }}"><img src="{% static 'images/enrollment (2).png' %}" width="20" height="20"></a></th></tr>
 
     {% endfor %}
     </table>
