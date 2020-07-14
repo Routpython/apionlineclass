@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="011d8dc0-b631-4586-853f-9fd7268cce85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineClasses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/OnlineClasses/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/enroll.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/enroll.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mainmenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainmenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/st_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/st_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/st_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/st_register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stu_profile_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stu_profile_home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/studenthome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/studenthome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/studentmenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/studentmenu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +160,7 @@
       <workItem from="1594653736770" duration="12000" />
       <workItem from="1594696285548" duration="980000" />
       <workItem from="1594697289832" duration="1782000" />
-      <workItem from="1594699111902" duration="274000" />
+      <workItem from="1594699111902" duration="571000" />
     </task>
     <task id="LOCAL-00001" summary="here i have added student enroll page">
       <created>1594441252487</created>
@@ -187,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594612877176</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="HEre i  have worked on search bar and Home Page">
+      <created>1594699549789</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594699549789</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,13 +192,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="here i have added student enroll page" />
     <MESSAGE value="Here i have added the logics of student login student enroll to subjects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Here i have added the logics of student login student enroll to subjects" />
+    <MESSAGE value="HEre i  have worked on search bar and Home Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="HEre i  have worked on search bar and Home Page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="266" y="0" key="CommitChangelistDialog2" timestamp="1594612876301">
+    <state x="217" y="0" key="CommitChangelistDialog2" timestamp="1594699548303">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="266" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1594612876301" />
+    <state x="217" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1594699548303" />
     <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1594652370796">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -227,9 +224,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="340" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1594697303035" />
-    <state x="443" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594699493929">
+    <state x="443" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594699687313">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="443" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594699493929" />
+    <state x="443" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594699687313" />
   </component>
 </project>
