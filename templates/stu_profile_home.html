@@ -2,15 +2,23 @@
 
 {% block common %}
       {% include 'student_after_login_menu.html'%}
-    <h3>Welcome {{ cont }} To Your Profile</h3>
+<br>
+    <h2 align="center"> Welcome  To Your Profile</h2>
+    <hr width="700">
+<table align="center" style="font-family:'Roboto Thin'">
+  {% for x in details %}
+        <th>
+        <div class="card bg-danger text-white" style="width: 18rem;">
 
-       <div class="container">
-    {% for x  in details %}
-        {{ x.stu_name }}
-        {{ x.contact }}
-        {{ x.email }}
-        {% endfor %}
+  <div class="card-body">{{ x.stu_name }}
+    <h5 class="card-title">{{x.contact}}</h5>
+    <p class="card-text">{{ x.email }}</p>
+  </div>
 </div>
+        </th>
+{% endfor %}
+</table>
+    <br>
 
 
 {% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'common.html' %}
+{%  load static %}
+{% block common %}
+      {% include 'student_after_login_menu.html'%}
+    <h2 align="center">Your Enrolled Courses </h2>
+    <hr width="700" color="red">
+
+    <form method="post" action="{% url 'c_delete' %}">
+    {% csrf_token %}
+    <table align="center" width="500">
+        <tr style="font-family:DialogInput">
+            <th></th>
+    <th>COURSE NAME</th>
+    <th>DELETE COURSE</th>
+    </tr>
+    {% for x  in log %}
+        <tr>
+        <th><input type="number" name="d1" value="{{ x.contact }}" hidden></th>
+        <th>{{ x.c_name }}</th>
+
+            <th><button type="submit" class="btn btn-primary" name="d2" value="{{ x.c_name }}">Delete</button></th></tr>
+
+        {% endfor %}
+    </table>
+    </form>
+      <table align="center">
+        <tr><th>
+            {% if msg %}
+                    <div class="alert alert-danger" role="alert">{{msg}}</div>
+            {% endif %}
+        </th></tr>
+    </table>
+
+
+    <br>
+{% endblock %}

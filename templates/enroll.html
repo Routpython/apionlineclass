@@ -2,13 +2,25 @@
 {% load static %}
 {% block common %}
       {% include 'student_after_login_menu.html'%}
-    <h2 align="center">Welcome <a href="#">{{ cno }}</a></h2>
+    <h2 align="center">Enroll The Courses</h2>
     <hr width="700" color="red">
 
-    <br>
-    <table align="center" width="500" style="height: 200px">
+
+    <table align="center">
+        <tr><th>
+            {% for x in messages %}
+                    <div class="alert alert-danger" role="alert">{{x}}</div>
+            {% endfor %}
+        </th></tr>
+    </table>
+
+     <form method="post" action="{% url 'e_roll' %}" >
+    {% csrf_token %}
+    <table align="center" width="700" style="height: 200px">
 
     <tr style="border: 2px; font-family: 'Candara Light';background-color:skyblue" >
+
+        <th></th>
         <th>Subject</th>
         <th>Faculty Name</th>
         <th>Date</th>
@@ -19,16 +31,19 @@
         </tr>
     <tr></tr>
 
-        {% for x in classes   %}
-            <tr style="font-family:'Goudy Old Style'"><th>{{ x.name }}</th>
+        {% for x in classes %}
+            <tr style="font-family:'Goudy Old Style'">
+                <th><input type="number" name="d1" value="{{cont }}" hidden></th>
+                <th>{{ x.name }}</th>
                 <th>{{x.faculty}}</th>
                 <th>{{x.date}}</th>
                 <th>{{x.time}}</th>
                 <th>{{ x.price }}</th>
                 <th>{{x.duration}} Days</th>
-                 <th><a href="{% url 'e_roll' %}?cno={{ cno }}"><img src="{% static 'images/enrollment (2).png' %}" width="20" height="20"></a></th></tr>
+                <th><button type="submit" class="btn btn-primary" name="d2" value="{{ x.name }}">Enroll</button></th></tr>
 
-    {% endfor %}
+        {% endfor %}
     </table>
+    </form>
     <br>
 {% endblock %}

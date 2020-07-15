@@ -38,5 +38,6 @@ urlpatterns = [
 
     path('enroll/',views.enroll,name='enroll'),
     path('e_roll/',views.e_roll,name='e_roll'),
-    path('view_enrollclass/',views.view_enrollclass,name='view_enrollclass')
+    path('view_enroll/',views.view_enroll,name='view_enroll'),
+    path('c_delete/',views.c_delete,name='c_delete')
 ]

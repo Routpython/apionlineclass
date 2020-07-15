@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="011d8dc0-b631-4586-853f-9fd7268cce85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app1/migrations/0005_auto_20200715_0734.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/view_enroll.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OnlineClasses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/OnlineClasses/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/enroll.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/enroll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/st_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/st_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stu_profile_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stu_profile_home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/student_after_login_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student_after_login_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/studenthome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/studenthome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,21 +32,6 @@
       <set />
     </option>
     <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="db [2]" type="feb32156:DbDataSourceImpl" />
@@ -161,6 +157,11 @@
       <workItem from="1594696285548" duration="980000" />
       <workItem from="1594697289832" duration="1782000" />
       <workItem from="1594699111902" duration="571000" />
+      <workItem from="1594722812514" duration="17000" />
+      <workItem from="1594778245961" duration="1742000" />
+      <workItem from="1594780027867" duration="1782000" />
+      <workItem from="1594781840217" duration="1786000" />
+      <workItem from="1594783658049" duration="1025000" />
     </task>
     <task id="LOCAL-00001" summary="here i have added student enroll page">
       <created>1594441252487</created>
@@ -196,37 +197,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="HEre i  have worked on search bar and Home Page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="217" y="0" key="CommitChangelistDialog2" timestamp="1594699548303">
+    <state x="217" y="0" key="CommitChangelistDialog2" timestamp="1594699698488">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="217" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1594699548303" />
-    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1594652370796">
+    <state x="217" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1594699698488" />
+    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1594722827078">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594652370796" />
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom" timestamp="1594611724862">
+    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594722827078" />
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1594784349701">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594611724862" />
-    <state width="1237" height="112" key="GridCell.Tab.0.center" timestamp="1594611724862">
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594784349701" />
+    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1594784349701">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594611724862" />
-    <state width="1237" height="112" key="GridCell.Tab.0.left" timestamp="1594611724862">
+    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594784349701" />
+    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1594784349701">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594611724862" />
-    <state width="1237" height="112" key="GridCell.Tab.0.right" timestamp="1594611724862">
+    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594784349701" />
+    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1594784349701">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="112" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594611724862" />
-    <state x="340" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1594697303035">
+    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594784349701" />
+    <state x="340" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1594783671720">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="340" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1594697303035" />
-    <state x="443" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594699687313">
+    <state x="340" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1594783671720" />
+    <state x="443" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594784783543">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="443" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594699687313" />
+    <state x="443" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594784783543" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1594780983540">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594780983540" />
   </component>
 </project>

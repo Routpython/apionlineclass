@@ -2,8 +2,8 @@
 
 from django.db import models
 class EnrollSubjects(models.Model):
-    no=models.IntegerField()
     contact=models.IntegerField()
+    c_name = models.CharField(max_length=40, default=None)
 
 class AddNewClasses(models.Model):
     no=models.AutoField(primary_key=True)

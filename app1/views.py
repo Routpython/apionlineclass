@@ -90,28 +90,42 @@ def logins_stu(request):
     con= request.POST.get("s1")
     passw = request.POST.get("s2")
     try:
-        StudentModel.objects.get(contact=con, passw=passw)
-        details = StudentModel.objects.filter(contact=con, passw=passw)
-        return render(request, 'stu_profile_home.html', {'details': details, 'cont': con})
+        StudentModel.objects.get(contact=con,passw=passw)
+        details=StudentModel.objects.filter(contact=con,passw=passw)
+        return render(request,'stu_profile_home.html', {'details':details,'cont': con})
 
     except StudentModel.DoesNotExist:
         messages.error(request,'Contact No Or Password in Invalid')
+        return redirect('st_login')
+    except ValueError:
+        messages.error(request, 'Contact No is Invalid')
         return redirect('st_login')
 
 
 def enroll(request):
     cont = request.GET.get('con')
-    all_clases=AddNewClasses.objects.all()
-    return render(request,'enroll.html',{'classes':all_clases,'cno':cont})
+    all_classes=AddNewClasses.objects.all()
+    return render(request,'enroll.html',{'classes':all_classes,'cont':cont})
 
 def e_roll(request):
-   # id=request.GET.getlist('no')
-    cno=request.GET.get('cno')
+    all_classes= AddNewClasses.objects.all()
+    cont = request.POST.get('d1')
+    try:
+        name = request.POST.get('d2')
+        EnrollSubjects(contact=cont,c_name=name).save()
+        messages.success(request, 'Added Successfully')
+    except :
+        messages.error(request,'Already added')
+    return render(request, 'enroll.html', {'cont': cont, 'classes':all_classes})
 
-    print(cno)
-    #EnrollSubjects(no=id,contact=cno).save()
-    return redirect('enroll')
+def view_enroll(request):
+    con = request.GET.get('con')
+    log=EnrollSubjects.objects.filter(contact=con)
+    return render(request,'view_enroll.html',{'cont':con,'log':log})
 
-def view_enrollclass(request):
-    cont = request.GET.get('con')
-    return render(request,'view_enrollclass.html',{'cno':cont})
+def c_delete(request):
+    cont=request.POST.get('d1')
+    name=request.POST.get('d2')
+    EnrollSubjects.objects.filter(c_name=name).delete()
+    log = EnrollSubjects.objects.filter(contact=cont)
+    return render(request,'view_enroll.html',{'cont':cont,'log':log,'msg':'Deleted Successfully'})
